@@ -4,7 +4,7 @@ import CartWidget from "./CartWidget";
 const Navbar = () => {
     return (
     <nav className="bg-green-400">
-        <div className="max-w-4xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div className="mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-16">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button */}
@@ -51,11 +51,11 @@ const Navbar = () => {
                 </svg>
                 </button>
             </div>
-            <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+            <div className="flex-1 flex items-center justify-center sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
                 
                 <img
-                    className="lg:block h-8 justify-self-start"
+                    className="lg:block h-56 justify-self-start"
                     src="https://i.ibb.co/YPrHgMJ/My-project-4.png"
                     alt="RoHass logo"
                 />
