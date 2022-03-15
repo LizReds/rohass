@@ -10,7 +10,7 @@ const App = () => {
     <div>
         <Navbar/>
         <ItemListContainer greeting="¡Hola! Bienvenido a RoHass, aguacates de alta calidad."/>
-        <ProductCards/>
+        {/* <ProductCards/> */}
         <ItemCount/>
     </div>
     )

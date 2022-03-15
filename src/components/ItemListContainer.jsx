@@ -1,10 +1,15 @@
 import React from 'react'
+import ItemList from './ItemList';
 
-export const ItemListContainer = ({greeting}) => {
+const ItemListContainer = ({greeting}) => {
     return (
-    <h1 className='m-5 flex justify-center italic text-green-700 font-medium text-lg'>
-        {greeting}
-    </h1> 
+        <div>    
+            <h1 className='m-5 flex justify-center italic text-green-700 font-medium text-lg'>
+                {greeting}
+            </h1> 
+            <h2 className="text-2xl font-semibold text-gray-900">Nuestros Productos</h2>
+            <ItemList/>
+        </div>
     )
 };
 

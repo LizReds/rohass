@@ -11,7 +11,7 @@ export const ProductCards = () => {
         <div className="mt-4 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-6">
 
             {/*Product 1*/}
-            <div className="group relative">
+            <div className="group relative hidden">
             <div className="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
                 <img src="https://cdn.pixabay.com/photo/2016/03/05/19/03/appetite-1238257_960_720.jpg" alt="Aguacate Hass maduro cortado a la mitad" className="w-full h-full object-center object-cover"/>
             </div>
