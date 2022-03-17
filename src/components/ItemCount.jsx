@@ -16,7 +16,7 @@ const ItemCount = ()=> {
 
     return (
 
-            <div className="text-green-600 text-lg mx-24 font-bold py-2 px-32">
+            <div className="text-center text-green-600 text-lg mx-24 font-bold py-2 px-32">
                 <button className="w-6  bg-red-300" onClick = {removeItemButton}>-</button>
                 <span className="px-2">{counter}</span>
                 <button className="w-6  bg-red-300" onClick = {addItemButton}>+</button>

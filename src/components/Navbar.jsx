@@ -1,5 +1,6 @@
 import React from "react";
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return (
@@ -54,11 +55,14 @@ const Navbar = () => {
             <div className="flex-1 flex items-center justify-center sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
                 
+                <Link className="linkToHome" to="/">
                 <img
                     className="lg:block h-56 justify-self-start"
                     src="https://i.ibb.co/YPrHgMJ/My-project-4.png"
                     alt="RoHass logo"
                 />
+                </Link>
+
                 </div>
                 <div className="hidden sm:block sm:ml-6">
                 <div className="flex space-x-6">

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Item = (props) => {
     return (
@@ -13,14 +14,19 @@ const Item = (props) => {
                         <img src={props.product.img} alt="Aguacate Hass maduro cortado a la mitad" className="w-full h-full object-center object-cover"/>
                     </div>
                     <h3 className="mt-6 text-sm text-gray-500">
-                    <a href="#">
+                    
                     <span className="absolute inset-0"></span>
                     {props.product.name}
-                    </a>
+                    
                     </h3>
-                    <p className="text-base font-semibold text-gray-900">{props.product.description}</p>
+                    
+                    
+                    {/*<p className="text-base font-semibold text-gray-900"></p>*/}
                 </div>
                 </div>
+                <Link to= {`/productDetail/${props.product.id}`} >
+                    <button className="bg-red-300 p-2 rounded">Ver más</button>
+                    </Link>
             </div>
         </div>
         </div>
