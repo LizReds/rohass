@@ -1,22 +1,47 @@
-import React, {useEffect, useState} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom';
+import { CartContext } from './CartContext';
 import ItemCount from './ItemCount';
 import ItemDetail from './ItemDetail';
+import { stock } from './stock';
 
 const ItemDetailContainer = () => {
 const [item, setItem] = useState([]);
 const [loading, setLoading] = useState (false)
 const [savedCartItems, setSavedCartItems] = useState ({})
+const productList = stock;
+const [stockUpdate, setStockUpdate] = useState(productList)
 const {itemId} = useParams()
-const productList = [
-    {id:"01", name:"Aguacate Hass", description:"Aguacate Hass seleccionado. Caja x10 unidades", img:"https://cdn.pixabay.com/photo/2016/03/05/19/03/appetite-1238257_960_720.jpg", price:"12.000 COP"},
-    {id:"02", name:"Aguacate Lorena", description:"Aguacate Lorena seleccionado. Caja x10 unidades", img: "https://cdn.pixabay.com/photo/2017/03/31/18/35/avocado-2192116_960_720.jpg", price:"20.000 COP"},
-    {id:"03", name:"Aguacate Guatemalteco", description:"Aguacate Guatemalteco seleccionado. Caja x10 unidades", img: "https://cdn.pixabay.com/photo/2020/07/09/20/22/avocados-5388669_960_720.jpg", price:"15.000 COP"}
-]
+const {cart, addItem, isInCart, addSameItem} = useContext(CartContext);
+let index = cart.findIndex(elem => elem.id == itemId)
 
+
+
+const updateStockPlus = (quantity) => {
+    let modifiedQuantity = stockUpdate[+itemId - 1].stock += quantity;
+    stockUpdate[+itemId - 1].stock = modifiedQuantity;
+    setStockUpdate([...stockUpdate]);
+};
+
+const updateStockMinus = (quantity) => {
+    let modifiedQuantity = stockUpdate[+itemId - 1].stock -= quantity
+    stockUpdate[+itemId - 1].stock = modifiedQuantity;
+    setStockUpdate([...stockUpdate]);
+};
 
 const saveItems = (obj) => {
     setSavedCartItems(obj)
+
+    
+        if(!isInCart(itemId)){
+            addItem(obj);
+    
+        }else{
+            //console.log(index)
+            let totalQuantity = obj.quantity + cart[index].quantity
+            obj.quantity = totalQuantity;
+            addSameItem(index, obj);
+        }
 }
 
 const getProducts = new Promise ((resolve, reject)=>{
@@ -35,7 +60,7 @@ useEffect (()=>{
     getProducts.then(response=>setItem(response.find((prod => prod.id == itemId)))).catch(error=>console.log(error)).finally(()=>{setLoading(false)})
 },[itemId])
 
-console.log(savedCartItems)
+console.log(cart)
     return (
         <>
         {loading 
@@ -43,7 +68,7 @@ console.log(savedCartItems)
         : 
         <div>
             {<ItemDetail item={item}/>}
-            <ItemCount saveItems={saveItems}/>        
+            <ItemCount saveItems={saveItems} item={item} updateStockPlus={updateStockPlus} updateStockMinus={updateStockMinus}/>        
         </div>}
         </>
     )

@@ -68,25 +68,31 @@ const Navbar = () => {
                 <div className="flex space-x-6">
                     {/* Current: "bg-gray-900 text-white", Default: "text-gray-300
                     hover:bg-gray-700 hover:text-white" */}
-                    <a
-                    href="#"
-                    className="bg-red-400 text-white px-3 py-2 rounded-md text-sm font-medium"
-                    aria-current="page"
-                    >
-                    Productos
-                    </a>
-                    <a
-                    href="#"
-                    className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >
+                    
+                    
+                    <Link className="bg-red-400 text-white px-3 py-2 rounded-md text-sm font-medium" to="">
+                    Aguacate
+                    </Link>
+
+                    <Link className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="">
+                    Fruta
+                    </Link>
+
+                    <Link className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="">
+                    Otros productos 
+                    </Link>
+
+                    <Link className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="">
                     Nosotros
-                    </a>
-                    <a
-                    href="#"
-                    className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                    Beneficios
-                    </a>
+                    </Link>
+
+
+
+
+
+
+
+
                 </div>
                 </div>
             </div>

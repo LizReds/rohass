@@ -11,7 +11,7 @@ const Item = (props) => {
                 <div className="card justify-center">
                 <div className="group relative">
                     <div className="relative w-80 h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                        <img src={props.product.img} alt="Aguacate Hass maduro cortado a la mitad" className="w-full h-full object-center object-cover"/>
+                        <img src={props.product.img} alt={props.product.name} className="w-full h-full object-center object-cover"/>
                     </div>
                     <h3 className="text-center mt-6 text-sm text-gray-500">
                     
