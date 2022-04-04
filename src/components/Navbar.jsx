@@ -70,19 +70,19 @@ const Navbar = () => {
                     hover:bg-gray-700 hover:text-white" */}
                     
                     
-                    <Link className="bg-red-400 text-white px-3 py-2 rounded-md text-sm font-medium" to="">
+                    <Link className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/products/Aguacates">
                     Aguacate
                     </Link>
 
-                    <Link className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="">
+                    <Link className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/products/Frutas">
                     Fruta
                     </Link>
 
-                    <Link className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="">
+                    <Link className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/products/Otros">
                     Otros productos 
                     </Link>
 
-                    <Link className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="">
+                    <Link className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/nosotros">
                     Nosotros
                     </Link>
 

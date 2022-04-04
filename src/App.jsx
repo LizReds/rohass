@@ -19,6 +19,7 @@ const App = () => {
                     <Navbar/>
                         <Routes>
                             <Route path="/" element={<ItemListContainer greeting="¡Hola! Bienvenido a RoHass, productos del campo de alta calidad."/>}/>
+                            <Route path="/products/:category" element={<ItemListContainer greeting="¡Hola! Bienvenido a RoHass, productos del campo de alta calidad."/>}/>
                             <Route path="/productDetail/:itemId" element={<ItemDetailContainer />}/>
                             <Route path="*" element={<Navigate to="/"/>}/>
                             <Route path="/cart" element={<Cart/>}/>

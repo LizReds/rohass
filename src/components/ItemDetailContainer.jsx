@@ -4,6 +4,7 @@ import { CartContext } from './CartContext';
 import ItemCount from './ItemCount';
 import ItemDetail from './ItemDetail';
 import { stock } from './stock';
+import { getOneProductData } from '../utils/getData';
 
 const ItemDetailContainer = () => {
 const [item, setItem] = useState([]);
@@ -44,7 +45,7 @@ const saveItems = (obj) => {
         }
 }
 
-const getProducts = new Promise ((resolve, reject)=>{
+/* const getProducts = new Promise ((resolve, reject)=>{
     let condition = true 
     if (condition){
         setTimeout(()=>{
@@ -53,11 +54,12 @@ const getProducts = new Promise ((resolve, reject)=>{
     } else {
         reject ("Error!")
     }
-})
+}) */
 
 useEffect (()=>{
     setLoading (true)
-    getProducts.then(response=>setItem(response.find((prod => prod.id == itemId)))).catch(error=>console.log(error)).finally(()=>{setLoading(false)})
+    getOneProductData(itemId).then(response=>setItem(response))
+    .finally(()=>{setLoading(false)})
 },[itemId])
 
 console.log(cart)

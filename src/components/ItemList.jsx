@@ -2,14 +2,15 @@ import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom';
 import Item from "./Item";
 import { stock } from './stock';
+import { getAllData } from '../utils/getData';
 
 const ItemList = () => {
 const [productList, setProductList] = useState([]);
 const [loading, setLoading] = useState (true)
 const products = stock;
+const {category} = useParams()
 
-
-const getProducts = new Promise ((resolve, reject)=>{
+/* const getProducts = new Promise ((resolve, reject)=>{
     let condition = true 
     if (condition){
         setTimeout(()=>{
@@ -22,9 +23,34 @@ const getProducts = new Promise ((resolve, reject)=>{
 
 useEffect (()=>{
     setLoading (true)
-    getProducts.then(response=>setProductList(response)).catch(error=>console.log(error))
+    getProducts.then(response=>{
+        if(!category){
+            setProductList(response)
+        }else{
+            setProductList(response.filter(x => x.category == category))
+        }
+        }).catch(error=>console.log(error))
     .finally(()=>{setLoading(false)})
-},[])
+},[category]) */
+
+
+
+//Consumiendo desde base de datos:
+useEffect(() => {
+    getAllData().then(response => {
+        setLoading(true)
+        if(!category){
+            setProductList(response)
+        console.log(response)
+        }else{
+            setProductList(response.filter(x => x.category == category))
+        }
+    })
+    .finally(() => {
+        setLoading(false)
+    })
+}, [category])
+
 
 
     return (
