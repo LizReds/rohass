@@ -20,3 +20,5 @@ export const getOneProductData = async(id) => {
     return dataItem;
 
 }
+
+
