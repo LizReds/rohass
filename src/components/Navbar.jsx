@@ -52,69 +52,52 @@ const Navbar = () => {
                     </svg>
                     </button>
                 </div>
-            <div className="flex-1 flex items-center justify-center sm:justify-start">
-                <div className="flex-shrink-0 flex items-center">
-                
-                <Link className="linkToHome" to="/">
-                <img
-                    className="lg:block h-56 justify-self-start"
-                    src="https://i.ibb.co/YPrHgMJ/My-project-4.png"
-                    alt="RoHass logo"
-                />
-                </Link>
 
-                </div>
-                <div className="hidden sm:block sm:ml-6">
-                    <div className="flex space-x-6">
-                        {/* Current: "bg-gray-900 text-white", Default: "text-gray-300
-                        hover:bg-gray-700 hover:text-white" */}
-                        <Link className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/products/Aguacates">
-                        Aguacate
-                        </Link>
-
-                        <Link className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/products/Frutas">
-                        Fruta
-                        </Link>
-
-                        <Link className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/products/Otros">
-                        Otros productos 
-                        </Link>
-
-                        <Link className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/nosotros">
-                        Nosotros
+                <div className="flex-1 flex items-center justify-center sm:justify-start">
+                    <div className="flex-shrink-0 flex items-center">
+                        <Link className="linkToHome" to="/">
+                            <img
+                                className="lg:block hidden h-56 justify-self-start"
+                                src="https://i.ibb.co/YPrHgMJ/My-project-4.png"
+                                alt="RoHass logo"
+                            />
                         </Link>
                     </div>
+
+                    <div className="hidden sm:block sm:ml-6">
+                        <div className="flex space-x-6">
+                            <Link className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/products/Aguacates">
+                            Aguacate
+                            </Link>
+
+                            <Link className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/products/Frutas">
+                            Fruta
+                            </Link>
+
+                            <Link className="text-black hover:bg-red-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium" to="/products/Otros">
+                            Otros productos 
+                            </Link>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+                <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 {/*Cart Widget*/}
                 <CartWidget/>
-            </div>
                 </div>
+            </div>
 
             <div className="sm:hidden" id="mobile-menu">
                 <div className="px-2 pt-2 pb-3 space-y-1">
-                {/* Current: "bg-gray-900 text-white", Default: "text-gray-300
-                hover:bg-gray-700 hover:text-white" */}
-                <a
-                    href="#"
-                    className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-                    aria-current="page"
-                >
-                    Productos
-                </a>
-                <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                    Nosotros
-                </a>
-                <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                    Beneficios
-                </a>
+                    <Link className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" to="/products/Aguacates">
+                        Aguacate
+                    </Link>
+                    <Link  className="text-gray-300 block px-3 py-2 rounded-md text-base font-medium" aria-current="page" to="/products/Frutas">
+                        Fruta
+                    </Link>
+                    <Link className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" to="/products/Otros">
+                        Otros productos 
+                    </Link>
                 </div>
             </div>
         </div>

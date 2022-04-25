@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 
 const Item = (props) => {
     return (
-        <div className="bg-gray-100 container flex">
+        <div className='container mx-auto flex justify-center'>
+        <div className=" bg-gray-100">
             <div className="max-w-7xl mx-auto px-4 lg:px-8 ">
                 <div className="max-w-2xl mx-auto  lg:max-w-none">
                     <div className="mt-4 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-6">
@@ -25,6 +26,7 @@ const Item = (props) => {
                 </div>
             </div>
         </div>
+        </div> 
     )
 }
 

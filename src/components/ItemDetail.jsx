@@ -10,8 +10,6 @@ const ItemDetail = (props) => {
                 </div>
                 <p className='text-center p-2 text-lg'>{props.item.description}</p>
                 <p className='text-center p-2 text-lg'>${props.item.price}</p>
-                <p className='text-center p-2 text-lg'>Unidades disponibles: {props.item.stock}</p>
-
             </div>
         </div>
     )
