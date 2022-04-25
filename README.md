@@ -3,17 +3,15 @@
 RoHass is a Colombian e-commerce developed with React Js. It offers high-quality farm products. Its signature product is the Hass avocado. 
 
 ## Built with 🛠️
----
 [React Js](https://reactjs.org/)
+
 [Tailwind CSS](https://tailwindcss.com/)
 
 
 ## Authors ✒️
----
 Lizeth Rojas - [LizReds](https://github.com/LizReds)
 
 ## Acknowledgements 
----
 [React Icons](https://react-icons.github.io/react-icons/)
 
 A special thanks to Mauricio Rojas and Fabian Rojas for helping me figure out things in this, my first project with React.Js
